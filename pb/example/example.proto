@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package example;
+
+import "google/api/annotations.proto";
+
+service Example {
+    rpc SayHello (SayHelloRequest) returns (SayHelloResponse) {
+        option (google.api.http) = {
+            post: "/v1/SayHello"
+            body: "*"
+        };
+    }
+}
+
+message SayHelloRequest {
+    string User = 1;
+}
+
+message SayHelloResponse {
+    string Msg = 1;
+}
