@@ -1,6 +1,6 @@
 syntax = "proto3";
-
 package example;
+option go_package = "github.com/SongLee24/grpc-http-example/pb/example";
 
 import "google/api/annotations.proto";
 
